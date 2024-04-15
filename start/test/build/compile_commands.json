@@ -1,0 +1,237 @@
+[
+{
+  "directory": "E:/OS/x86os/start/test/build/source/boot",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/boot.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/boot.dir/start.S.obj -c E:/OS/x86os/start/test/source/boot/start.S",
+  "file": "E:/OS/x86os/start/test/source/boot/start.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/boot",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/boot.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/boot.dir/boot.c.obj -c E:/OS/x86os/start/test/source/boot/boot.c",
+  "file": "E:/OS/x86os/start/test/source/boot/boot.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loader",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loader.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/loader.dir/start.S.obj -c E:/OS/x86os/start/test/source/loader/start.S",
+  "file": "E:/OS/x86os/start/test/source/loader/start.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loader",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loader.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/loader.dir/loader_16.c.obj -c E:/OS/x86os/start/test/source/loader/loader_16.c",
+  "file": "E:/OS/x86os/start/test/source/loader/loader_16.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loader",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loader.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/loader.dir/loader_32.c.obj -c E:/OS/x86os/start/test/source/loader/loader_32.c",
+  "file": "E:/OS/x86os/start/test/source/loader/loader_32.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/kernel.dir/init/start.S.obj -c E:/OS/x86os/start/test/source/kernel/init/start.S",
+  "file": "E:/OS/x86os/start/test/source/kernel/init/start.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/core/memory.c.obj -c E:/OS/x86os/start/test/source/kernel/core/memory.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/core/memory.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/core/syscall.c.obj -c E:/OS/x86os/start/test/source/kernel/core/syscall.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/core/syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/core/task.c.obj -c E:/OS/x86os/start/test/source/kernel/core/task.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/core/task.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/cpu/cpu.c.obj -c E:/OS/x86os/start/test/source/kernel/cpu/cpu.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/cpu/cpu.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/cpu/irq.c.obj -c E:/OS/x86os/start/test/source/kernel/cpu/irq.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/cpu/irq.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/console.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/console.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/console.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/dev.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/dev.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/dev.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/disk.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/disk.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/disk.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/kbd.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/kbd.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/kbd.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/time.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/time.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/time.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/dev/tty.c.obj -c E:/OS/x86os/start/test/source/kernel/dev/tty.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/dev/tty.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/devfs/devfs.c.obj -c E:/OS/x86os/start/test/source/kernel/fs/devfs/devfs.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/fs/devfs/devfs.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/fatfs/fatfs.c.obj -c E:/OS/x86os/start/test/source/kernel/fs/fatfs/fatfs.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/fs/fatfs/fatfs.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/file.c.obj -c E:/OS/x86os/start/test/source/kernel/fs/file.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/fs/file.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/fs/fs.c.obj -c E:/OS/x86os/start/test/source/kernel/fs/fs.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/fs/fs.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/init/first_task.c.obj -c E:/OS/x86os/start/test/source/kernel/init/first_task.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/init/first_task.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/kernel.dir/init/first_task_entry.S.obj -c E:/OS/x86os/start/test/source/kernel/init/first_task_entry.S",
+  "file": "E:/OS/x86os/start/test/source/kernel/init/first_task_entry.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/init/init.c.obj -c E:/OS/x86os/start/test/source/kernel/init/init.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/init/init.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/init/lib_syscall.c.obj -c E:/OS/x86os/start/test/source/kernel/init/lib_syscall.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/init/lib_syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/ipc/mutex.c.obj -c E:/OS/x86os/start/test/source/kernel/ipc/mutex.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/ipc/mutex.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/ipc/sem.c.obj -c E:/OS/x86os/start/test/source/kernel/ipc/sem.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/ipc/sem.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/bitmap.c.obj -c E:/OS/x86os/start/test/source/kernel/tools/bitmap.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/tools/bitmap.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/klib.c.obj -c E:/OS/x86os/start/test/source/kernel/tools/klib.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/tools/klib.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/list.c.obj -c E:/OS/x86os/start/test/source/kernel/tools/list.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/tools/list.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/kernel",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/kernel.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/kernel.dir/tools/log.c.obj -c E:/OS/x86os/start/test/source/kernel/tools/log.c",
+  "file": "E:/OS/x86os/start/test/source/kernel/tools/log.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/applib",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/app.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/app.dir/crt0.S.obj -c E:/OS/x86os/start/test/source/applib/crt0.S",
+  "file": "E:/OS/x86os/start/test/source/applib/crt0.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/applib",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/app.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/app.dir/cstart.c.obj -c E:/OS/x86os/start/test/source/applib/cstart.c",
+  "file": "E:/OS/x86os/start/test/source/applib/cstart.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/applib",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/app.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/app.dir/lib_syscall.c.obj -c E:/OS/x86os/start/test/source/applib/lib_syscall.c",
+  "file": "E:/OS/x86os/start/test/source/applib/lib_syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/shell",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/shell.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/shell.dir/main.c.obj -c E:/OS/x86os/start/test/source/shell/main.c",
+  "file": "E:/OS/x86os/start/test/source/shell/main.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/init",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/init.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/init.dir/__/applib/crt0.S.obj -c E:/OS/x86os/start/test/source/applib/crt0.S",
+  "file": "E:/OS/x86os/start/test/source/applib/crt0.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/init",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/init.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/init.dir/__/applib/cstart.c.obj -c E:/OS/x86os/start/test/source/applib/cstart.c",
+  "file": "E:/OS/x86os/start/test/source/applib/cstart.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/init",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/init.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/init.dir/__/applib/lib_syscall.c.obj -c E:/OS/x86os/start/test/source/applib/lib_syscall.c",
+  "file": "E:/OS/x86os/start/test/source/applib/lib_syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/init",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/init.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/init.dir/main.c.obj -c E:/OS/x86os/start/test/source/init/main.c",
+  "file": "E:/OS/x86os/start/test/source/init/main.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loop",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loop.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/loop.dir/__/applib/crt0.S.obj -c E:/OS/x86os/start/test/source/applib/crt0.S",
+  "file": "E:/OS/x86os/start/test/source/applib/crt0.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loop",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loop.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/loop.dir/__/applib/cstart.c.obj -c E:/OS/x86os/start/test/source/applib/cstart.c",
+  "file": "E:/OS/x86os/start/test/source/applib/cstart.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loop",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loop.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/loop.dir/__/applib/lib_syscall.c.obj -c E:/OS/x86os/start/test/source/applib/lib_syscall.c",
+  "file": "E:/OS/x86os/start/test/source/applib/lib_syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/loop",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/loop.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/loop.dir/main.c.obj -c E:/OS/x86os/start/test/source/loop/main.c",
+  "file": "E:/OS/x86os/start/test/source/loop/main.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/snake",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/snake.dir/includes_ASM.rsp -m32 -g -g -o CMakeFiles/snake.dir/__/applib/crt0.S.obj -c E:/OS/x86os/start/test/source/applib/crt0.S",
+  "file": "E:/OS/x86os/start/test/source/applib/crt0.S"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/snake",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/snake.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/snake.dir/__/applib/cstart.c.obj -c E:/OS/x86os/start/test/source/applib/cstart.c",
+  "file": "E:/OS/x86os/start/test/source/applib/cstart.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/snake",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/snake.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/snake.dir/__/applib/lib_syscall.c.obj -c E:/OS/x86os/start/test/source/applib/lib_syscall.c",
+  "file": "E:/OS/x86os/start/test/source/applib/lib_syscall.c"
+},
+{
+  "directory": "E:/OS/x86os/start/test/build/source/snake",
+  "command": "D:/Environment/x86_64-elf-tools-windows/bin/x86_64-elf-gcc.exe  @CMakeFiles/snake.dir/includes_C.rsp -g -c -O0 -m32 -fno-pie -fno-stack-protector -fno-asynchronous-unwind-tables -g -o CMakeFiles/snake.dir/main.c.obj -c E:/OS/x86os/start/test/source/snake/main.c",
+  "file": "E:/OS/x86os/start/test/source/snake/main.c"
+}
+]
