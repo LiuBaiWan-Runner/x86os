@@ -95,6 +95,7 @@ static void show_msg (const char *msg){
     803c:	66 c3                	retl   
 
 0000803e <loader_entry>:
+
 void loader_entry(){
     803e:	66 55                	push   %ebp
     8040:	66 89 e5             	mov    %esp,%ebp
