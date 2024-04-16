@@ -21,7 +21,7 @@ _start:
 	
 	// 打印 L
     mov $0xe, %ah
-    mov $'L', %al    // 打印 'H'
+    mov $'L', %al
     int $0x10
 
 /*

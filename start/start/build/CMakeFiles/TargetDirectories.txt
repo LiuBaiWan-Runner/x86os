@@ -1,0 +1,8 @@
+E:/OS/x86os/start/start/build/CMakeFiles/edit_cache.dir
+E:/OS/x86os/start/start/build/CMakeFiles/rebuild_cache.dir
+E:/OS/x86os/start/start/build/source/boot/CMakeFiles/boot.dir
+E:/OS/x86os/start/start/build/source/boot/CMakeFiles/edit_cache.dir
+E:/OS/x86os/start/start/build/source/boot/CMakeFiles/rebuild_cache.dir
+E:/OS/x86os/start/start/build/source/loader/CMakeFiles/loader.dir
+E:/OS/x86os/start/start/build/source/loader/CMakeFiles/edit_cache.dir
+E:/OS/x86os/start/start/build/source/loader/CMakeFiles/rebuild_cache.dir
