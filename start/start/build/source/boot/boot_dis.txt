@@ -86,10 +86,10 @@ _start:
     7c17:	cd 10                	int    $0x10
 
 00007c19 <read_loader>:
-    mov $'!', %al    // 打印 '!'
     int $0x10
     */
 
+// 利用BIOS INT(13) 软中断读取磁盘，将loader读入内存（16位）
 read_loader:
     mov $0x0240, %ax    //ah = 0x02, al = 扇区数，64个扇区
     7c19:	b8 40 02             	mov    $0x240,%ax

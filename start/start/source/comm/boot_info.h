@@ -15,4 +15,7 @@ typedef struct _boot_info_t{
 
 } boot_info_t;
 
+#define SECTOR_SIZE             512             // 一个扇区大小512字节
+#define SYS_KERNEL_LOAD_ADDR    (1024 * 1024)   // 从1M内存开始处加载内核
+
 #endif
