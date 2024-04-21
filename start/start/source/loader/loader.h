@@ -5,6 +5,9 @@
 #include "comm/types.h"
 #include "comm/cpu_instr.h"
 
+// 汇编中的远跳转函数声明
+void protect_mode_entry(void);
+
 typedef struct SMAP_entry{
 
     uint32_t BaseL;     // base address uint64_t

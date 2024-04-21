@@ -66,12 +66,19 @@ static void enter_protect_mode(void){
     // 打开A20地址线
     uint8_t value = inb(0x92);
     outb(0x92, value | 0x2);
+    // 加载GDT表
     lgdt((uint32_t)gdt_table, sizeof(gdt_table));
+    // CR0的PE位置一
+    uint32_t cr0 = read_cr0();
+    write_cr0(cr0 | (1 << 0));
+    // 远跳转，清空流水线，进入汇编运行     8：与GDT选择子有关
+    far_jump(8, (uint32_t)protect_mode_entry);
 }
 
 void loader_entry(){
     show_msg("......loading......\n\r");
     detect_memory();
     enter_protect_mode();
+
     for(;;){}
 }
