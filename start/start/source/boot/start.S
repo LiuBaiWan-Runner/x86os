@@ -54,7 +54,7 @@ _start:
 // 利用BIOS INT(13) 软中断读取磁盘，将loader读入内存（16位）
 read_loader:
     mov $0x0240, %ax    //ah = 0x02, al = 扇区数，64个扇区
-    mov $0x8000, %bx    //es:bx:段地址加偏移量，要存放的起始地址
+    mov $0x8000, %bx    //es:bx:段地址加偏移量，指定loader要存在内存中的起始地址
     mov $0x0002, %cx    //ch = 柱面号，0号柱面， cl = 扇区号，2号扇区，在BIOS中扇区编号从1开始
     mov $0x0080, %dx    //dh = 磁头号，0号磁头， dl = 驱动器，0x00-0x7f为软盘，0x80-0xff为硬盘
     int $0x13

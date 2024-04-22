@@ -7,41 +7,41 @@ start address 0x00008000
 
 Program Header:
     LOAD off    0x00001000 vaddr 0x00008000 paddr 0x00008000 align 2**12
-         filesz 0x00000521 memsz 0x00000521 flags r-x
-    LOAD off    0x00001524 vaddr 0x00009524 paddr 0x00009524 align 2**12
-         filesz 0x00000018 memsz 0x00000070 flags rw-
+         filesz 0x0000052e memsz 0x0000052e flags r-x
+    LOAD off    0x00001530 vaddr 0x00009530 paddr 0x00009530 align 2**12
+         filesz 0x00000018 memsz 0x00000084 flags rw-
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         000004d9  00008000  00008000  00001000  2**0
+  0 .text         000004e6  00008000  00008000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .rodata       00000048  000084d9  000084d9  000014d9  2**0
+  1 .rodata       00000048  000084e6  000084e6  000014e6  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  2 .data         00000018  00009524  00009524  00001524  2**2
+  2 .data         00000018  00009530  00009530  00001530  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          00000054  00009540  00009540  0000153c  2**5
+  3 .bss          00000054  00009560  00009560  00001548  2**5
                   ALLOC
-  4 .comment      00000011  00000000  00000000  0000153c  2**0
+  4 .comment      00000011  00000000  00000000  00001548  2**0
                   CONTENTS, READONLY
-  5 .debug_aranges 00000060  00000000  00000000  00001550  2**3
+  5 .debug_aranges 00000060  00000000  00000000  00001560  2**3
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_info   000005d9  00000000  00000000  000015b0  2**0
+  6 .debug_info   000005d9  00000000  00000000  000015c0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_abbrev 00000273  00000000  00000000  00001b89  2**0
+  7 .debug_abbrev 00000273  00000000  00000000  00001b99  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_line   00000279  00000000  00000000  00001dfc  2**0
+  8 .debug_line   0000027a  00000000  00000000  00001e0c  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_frame  00000228  00000000  00000000  00002078  2**2
+  9 .debug_frame  00000228  00000000  00000000  00002088  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    000002c6  00000000  00000000  000022a0  2**0
+ 10 .debug_str    000002c6  00000000  00000000  000022b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000018  00000000  00000000  00002566  2**0
+ 11 .debug_ranges 00000018  00000000  00000000  00002576  2**0
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 00008000 l    d  .text	00000000 .text
-000084d9 l    d  .rodata	00000000 .rodata
-00009524 l    d  .data	00000000 .data
-00009540 l    d  .bss	00000000 .bss
+000084e6 l    d  .rodata	00000000 .rodata
+00009530 l    d  .data	00000000 .data
+00009560 l    d  .bss	00000000 .bss
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_aranges	00000000 .debug_aranges
 00000000 l    d  .debug_info	00000000 .debug_info
@@ -58,7 +58,7 @@ SYMBOL TABLE:
 000080b0 l     F .text	0000001a read_cr0
 000080ca l     F .text	00000012 write_cr0
 000080dc l     F .text	0000002b far_jump
-00009540 l     O .bss	00000054 boot_info
+00009560 l     O .bss	00000054 boot_info
 00008107 l     F .text	0000003b show_msg
 00008142 l     F .text	00000139 detect_memory
 0000827b l     F .text	00000096 enter_protect_mode
@@ -68,13 +68,13 @@ SYMBOL TABLE:
 00008370 l     F .text	0000001f outb
 0000838f l     F .text	00000134 read_disk
 00008311 g     F .text	00000023 loader_entry
-00009524 g     O .data	00000018 gdt_table
-000084c3 g     F .text	00000016 load_kernel
+00009530 g     O .data	00000018 gdt_table
+000084c3 g     F .text	00000023 load_kernel
 00008000 g       .text	00000000 _start
-0000953c g       .bss	00000000 __bss_start
+00009548 g       .bss	00000000 __bss_start
 00008003 g       .text	00000000 protect_mode_entry
-0000953c g       .data	00000000 _edata
-00009594 g       .bss	00000000 _end
+00009548 g       .data	00000000 _edata
+000095b4 g       .bss	00000000 _end
 
 
 
@@ -330,12 +330,12 @@ static void detect_memory(void){
     8158:	00 00 
 
     show_msg("Trying to detect memory: ");
-    815a:	66 68 d9 84 00 00    	pushl  $0x84d9
+    815a:	66 68 e6 84 00 00    	pushl  $0x84e6
     8160:	66 e8 a1 ff ff ff    	calll  8107 <show_msg>
     8166:	66 83 c4 04          	add    $0x4,%esp
 
     boot_info.ram_region_count = 0;
-    816a:	66 c7 06 90 95 00 00 	movl   $0x0,-0x6a70
+    816a:	66 c7 06 b0 95 00 00 	movl   $0x0,-0x6a50
     8171:	00 00 
     for(int i = 0; i < BOOT_RAM_REGION_MAX; i++){
     8173:	67 66 c7 45 ec 00 00 	movl   $0x0,-0x14(%ebp)
@@ -364,7 +364,7 @@ static void detect_memory(void){
     81c3:	4d 53 
     81c5:	74 13                	je     81da <detect_memory+0x98>
             show_msg("Falied!\n\r");
-    81c7:	66 68 f3 84 00 00    	pushl  $0x84f3
+    81c7:	66 68 00 85 00 00    	pushl  $0x8500
     81cd:	66 e8 34 ff ff ff    	calll  8107 <show_msg>
     81d3:	66 83 c4 04          	add    $0x4,%esp
             return;
@@ -388,21 +388,21 @@ static void detect_memory(void){
     8203:	75 39                	jne    823e <detect_memory+0xfc>
             //记录当前可用内存空间的起始地址和大小，使用低32位
             boot_info.ram_region_cfg[boot_info.ram_region_count].start = entry->BaseL;
-    8205:	66 a1 90 95          	mov    0x9590,%eax
+    8205:	66 a1 b0 95          	mov    0x95b0,%eax
     8209:	67 66 8b 55 e8       	mov    -0x18(%ebp),%edx
     820e:	67 66 8b 12          	mov    (%edx),%edx
-    8212:	67 66 89 14 c5 40 95 	mov    %edx,0x9540(,%eax,8)
+    8212:	67 66 89 14 c5 60 95 	mov    %edx,0x9560(,%eax,8)
     8219:	00 00 
             boot_info.ram_region_cfg[boot_info.ram_region_count].size = entry->LengthL;
-    821b:	66 a1 90 95          	mov    0x9590,%eax
+    821b:	66 a1 b0 95          	mov    0x95b0,%eax
     821f:	67 66 8b 55 e8       	mov    -0x18(%ebp),%edx
     8224:	67 66 8b 52 08       	mov    0x8(%edx),%edx
-    8229:	67 66 89 14 c5 44 95 	mov    %edx,0x9544(,%eax,8)
+    8229:	67 66 89 14 c5 64 95 	mov    %edx,0x9564(,%eax,8)
     8230:	00 00 
             boot_info.ram_region_count++;
-    8232:	66 a1 90 95          	mov    0x9590,%eax
+    8232:	66 a1 b0 95          	mov    0x95b0,%eax
     8236:	66 83 c0 01          	add    $0x1,%eax
-    823a:	66 a3 90 95          	mov    %eax,0x9590
+    823a:	66 a3 b0 95          	mov    %eax,0x95b0
         }
         if(contID == 0){
     823e:	67 66 83 7d f0 00    	cmpl   $0x0,-0x10(%ebp)
@@ -421,7 +421,7 @@ static void detect_memory(void){
         }
     }
     show_msg("Successful!\n\r");
-    825c:	66 68 fd 84 00 00    	pushl  $0x84fd
+    825c:	66 68 0a 85 00 00    	pushl  $0x850a
     8262:	66 e8 9f fe ff ff    	calll  8107 <show_msg>
     8268:	66 83 c4 04          	add    $0x4,%esp
 }
@@ -460,7 +460,7 @@ static void enter_protect_mode(void){
     82ba:	66 83 c4 08          	add    $0x8,%esp
     // 加载GDT表
     lgdt((uint32_t)gdt_table, sizeof(gdt_table));
-    82be:	66 b8 24 95 00 00    	mov    $0x9524,%eax
+    82be:	66 b8 30 95 00 00    	mov    $0x9530,%eax
     82c4:	66 6a 18             	pushl  $0x18
     82c7:	66 50                	push   %eax
     82c9:	66 e8 ab fd ff ff    	calll  807a <lgdt>
@@ -494,7 +494,7 @@ void loader_entry(){
     8311:	66 55                	push   %ebp
     8313:	66 89 e5             	mov    %esp,%ebp
     show_msg("......loading......\n\r");
-    8316:	66 68 0b 85 00 00    	pushl  $0x850b
+    8316:	66 68 18 85 00 00    	pushl  $0x8518
     831c:	66 e8 e5 fd ff ff    	calll  8107 <show_msg>
     8322:	66 83 c4 04          	add    $0x4,%esp
     detect_memory();
@@ -721,13 +721,19 @@ static void read_disk(uint32_t sector, uint32_t sector_count, uint8_t *buffer){
 void load_kernel(void){     // 此时进入32位保护模式运行环境，可访问4BG内存空间
     84c3:	55                   	push   %bp
     84c4:	89 e5                	mov    %sp,%bp
-    read_disk(100, 500, (uint8_t)SYS_KERNEL_LOAD_ADDR);    // 从第100个扇区开始后的500个扇区,250KB      从1M内存处开始加载内核
-    84c6:	6a 00                	push   $0x0
-    84c8:	68 f4 01             	push   $0x1f4
-    84cb:	00 00                	add    %al,(%bx,%si)
-    84cd:	6a 64                	push   $0x64
-    84cf:	e8 bb fe             	call   838d <outb+0x1d>
-    84d2:	ff                   	(bad)  
-    84d3:	ff 83 c4 0c          	incw   0xcc4(%bp,%di)
+    84c6:	83 ec 08             	sub    $0x8,%sp
+    read_disk(100, 500, (uint8_t *)SYS_KERNEL_LOAD_ADDR);    // 从第100个扇区开始后的500个扇区,250KB      指定从1M内存处开始加载内核
+    84c9:	68 00 00             	push   $0x0
+    84cc:	10 00                	adc    %al,(%bx,%si)
+    84ce:	68 f4 01             	push   $0x1f4
+    84d1:	00 00                	add    %al,(%bx,%si)
+    84d3:	6a 64                	push   $0x64
+    84d5:	e8 b5 fe             	call   838d <outb+0x1d>
+    84d8:	ff                   	(bad)  
+    84d9:	ff 83 c4 0c          	incw   0xcc4(%bp,%di)
+	((void(*)(void))SYS_KERNEL_LOAD_ADDR)();               // 跳转到kernel_init
+    84dd:	b8 00 00             	mov    $0x0,%ax
+    84e0:	10 00                	adc    %al,(%bx,%si)
+    84e2:	ff d0                	call   *%ax
     for(;;){}
-    84d7:	eb fe                	jmp    84d7 <load_kernel+0x14>
+    84e4:	eb fe                	jmp    84e4 <load_kernel+0x21>
