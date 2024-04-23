@@ -34,6 +34,7 @@ static void read_disk(uint32_t sector, uint32_t sector_count, uint8_t *buffer){
 
 void load_kernel(void){     // 此时进入32位保护模式运行环境，可访问4BG内存空间
     read_disk(100, 500, (uint8_t *)SYS_KERNEL_LOAD_ADDR);    // 从第100个扇区开始后的500个扇区,250KB      指定从1M内存处开始加载内核
-	((void(*)(void))SYS_KERNEL_LOAD_ADDR)();               // 跳转到kernel_init
+    // 跳转到kernel_init，将boot_info作为一个参数进行函数调用，进行函数调用时会将参数压入栈中，SYS_KERNEL_LOAD_ADDR地址处实际执行的是汇编的start
+	((void(*)(boot_info_t *))SYS_KERNEL_LOAD_ADDR)(&boot_info);
     for(;;){}
 }

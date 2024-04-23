@@ -2,7 +2,7 @@ __asm__(".code16gcc");
 
 #include "loader.h"
 
-static boot_info_t boot_info;
+boot_info_t boot_info;
 
 // 使用内联汇编打印字符串
 static void show_msg (const char *msg){

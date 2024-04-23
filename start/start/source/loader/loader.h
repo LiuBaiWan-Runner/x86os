@@ -8,6 +8,9 @@
 // 汇编中的远跳转函数声明
 void protect_mode_entry(void);
 
+// 参数调用声明
+extern boot_info_t boot_info;
+
 typedef struct SMAP_entry{
 
     uint32_t BaseL;     // base address uint64_t
