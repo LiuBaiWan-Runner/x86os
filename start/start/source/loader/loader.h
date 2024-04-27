@@ -4,6 +4,7 @@
 #include "comm/boot_info.h"
 #include "comm/types.h"
 #include "comm/cpu_instr.h"
+#include "comm/elf.h"
 
 // 汇编中的远跳转函数声明
 void protect_mode_entry(void);

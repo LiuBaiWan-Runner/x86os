@@ -32,9 +32,52 @@ static void read_disk(uint32_t sector, uint32_t sector_count, uint8_t *buffer){
 
 }
 
+static uint32_t reload_elf_file(uint8_t *file_buffer){
+    Elf32_Ehdr *elf_hdr = (Elf32_Ehdr *)file_buffer;
+    // 检查file_buffer是否为ELF文件，ELF文件第一个字节为0x7F,然后为ELF(0x45, 0x4C, 0x46)，发生错误直接返回1
+    if((elf_hdr->e_ident[0] != 0x7F) || (elf_hdr->e_ident[1] != 'E')
+        || (elf_hdr->e_ident[2] != 'L') || (elf_hdr->e_ident[3] != 'F')){
+            return 1;
+        }
+    // 从ELF文件提取代码和数据到内存
+    for(int i = 0; i < elf_hdr->e_phnum; i++){
+        Elf32_Phdr * phdr = (Elf32_Phdr *)(file_buffer + elf_hdr->e_phoff) + i;
+        // 检查表项是否可以加载
+        if(phdr->p_type != PT_LOAD){
+            continue;
+        }
+
+        // 拷贝到内存.text .rodata .data
+        uint8_t *src = file_buffer + phdr->p_offset;
+        uint8_t *dest = (uint8_t *)phdr->p_paddr;
+        for(int j = 0; j < phdr->p_filesz; j++){
+            *dest++ = *src++;
+        }
+        // 拷贝到内存.bss,清零
+        dest = (uint8_t *)phdr->p_paddr + phdr->p_filesz;
+        for(int j = 0; j < phdr->p_memsz - phdr->p_filesz; j++){
+            *dest++ = 0;
+        }
+    }
+    return elf_hdr->e_entry;
+}
+
+// 死机操作，让系统陷入死循环，后面改进比如打印错误信息
+static void die(int code){
+    for(;;){}
+}
+
 void load_kernel(void){     // 此时进入32位保护模式运行环境，可访问4BG内存空间
-    read_disk(100, 500, (uint8_t *)SYS_KERNEL_LOAD_ADDR);    // 从第100个扇区开始后的500个扇区,250KB      指定从1M内存处开始加载内核
+    read_disk(100, 500, (uint8_t *)SYS_KERNEL_LOAD_ADDR);    // 从第100个扇区开始后的500个扇区,250KB      指定从1M内存处开始加载内核elf文件
+    
+    uint32_t kernel_entry = reload_elf_file((uint8_t *)SYS_KERNEL_LOAD_ADDR);       // 将加载到1M处的内核ELF文件重新加载到64KB(0x10000)处,对ELF文件进行解析
+    
+    // 检查内核起始地址值，发生错误进行死机
+    if(kernel_entry == 0){
+        die(-1);
+    }
+
     // 跳转到kernel_init，将boot_info作为一个参数进行函数调用，进行函数调用时会将参数压入栈中，SYS_KERNEL_LOAD_ADDR地址处实际执行的是汇编的start
-	((void(*)(boot_info_t *))SYS_KERNEL_LOAD_ADDR)(&boot_info);
+	((void(*)(boot_info_t *))kernel_entry)(&boot_info);
     for(;;){}
 }

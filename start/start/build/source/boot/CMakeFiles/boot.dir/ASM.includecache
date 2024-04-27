@@ -6,9 +6,5 @@
 
 #IncludeRegexTransform: 
 
-E:/OS/x86os/start/start/source/boot/boot.h
-
 E:/OS/x86os/start/start/source/boot/start.S
-boot.h
-E:/OS/x86os/start/start/source/boot/boot.h
 

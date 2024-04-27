@@ -116,7 +116,7 @@ source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/linklibs.rsp
 source/kernel/kernel.exe: source/kernel/CMakeFiles/kernel.dir/objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=E:/OS/x86os/start/start/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable kernel.exe"
 	cd E:/OS/x86os/start/start/build/source/kernel && x86_64-elf-ld @CMakeFiles/kernel.dir/objects1.rsp -m elf_i386  -TE:/OS/x86os/start/start/source/kernel/kernel.lds -o E:/OS/x86os/start/start/build/source/kernel/kernel.elf
-	cd E:/OS/x86os/start/start/build/source/kernel && x86_64-elf-objcopy -O binary kernel.elf E:/OS/x86os/start/start/../../image/kernel.elf
+	cd E:/OS/x86os/start/start/build/source/kernel && x86_64-elf-objcopy -S kernel.elf E:/OS/x86os/start/start/../../image/kernel.elf
 	cd E:/OS/x86os/start/start/build/source/kernel && x86_64-elf-objdump -x -d -S -m i386 E:/OS/x86os/start/start/build/source/kernel/kernel.elf > kernel_dis.txt
 	cd E:/OS/x86os/start/start/build/source/kernel && x86_64-elf-readelf -a E:/OS/x86os/start/start/build/source/kernel/kernel.elf > kernel_elf.txt
 
