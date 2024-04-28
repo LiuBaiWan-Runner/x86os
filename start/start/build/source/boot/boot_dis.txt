@@ -56,11 +56,11 @@ SYMBOL TABLE:
 Disassembly of section .text:
 
 00007c00 <_start>:
-.code16     //十六位实模式
 .text       
 .global _start
 .extern boot_entry
 _start:
+    // 初始化配置寄存器
     mov $0, %ax
     7c00:	b8 00 00             	mov    $0x0,%ax
     mov %ax, %ds
@@ -74,10 +74,11 @@ _start:
     mov %ax, %gs
     7c0b:	8e e8                	mov    %ax,%gs
 
+    // 将栈指针移动到_start即0x7C00处
     mov $_start, %esp
     7c0d:	66 bc 00 7c 00 00    	mov    $0x7c00,%esp
 	
-	// 打印 L
+	// 调用int 10 软中断，打印字符 L
     mov $0xe, %ah
     7c13:	b4 0e                	mov    $0xe,%ah
     mov $'L', %al
@@ -93,7 +94,7 @@ _start:
 read_loader:
     mov $0x0240, %ax    //ah = 0x02, al = 扇区数，64个扇区
     7c19:	b8 40 02             	mov    $0x240,%ax
-    mov $0x8000, %bx    //es:bx:段地址加偏移量，指定loader要存在内存中的起始地址
+    mov $0x8000, %bx    //es:bx:段地址加偏移量，指定loader要存在内存中的起始地址，从BOOT的结束处0x8000开始
     7c1c:	bb 00 80             	mov    $0x8000,%bx
     mov $0x0002, %cx    //ch = 柱面号，0号柱面， cl = 扇区号，2号扇区，在BIOS中扇区编号从1开始
     7c1f:	b9 02 00             	mov    $0x2,%cx

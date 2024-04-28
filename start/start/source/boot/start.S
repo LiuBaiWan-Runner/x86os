@@ -9,6 +9,7 @@
 .global _start
 .extern boot_entry
 _start:
+    // 初始化配置寄存器
     mov $0, %ax
     mov %ax, %ds
     mov %ax, %ss
@@ -16,9 +17,10 @@ _start:
     mov %ax, %fs
     mov %ax, %gs
 
+    // 将栈指针移动到_start即0x7C00处
     mov $_start, %esp
 	
-	// 打印 L
+	// 调用int 10 软中断，打印字符 L
     mov $0xe, %ah
     mov $'L', %al
     int $0x10
@@ -53,7 +55,7 @@ _start:
 // 利用BIOS INT(13) 软中断读取磁盘，将loader读入内存（16位）
 read_loader:
     mov $0x0240, %ax    //ah = 0x02, al = 扇区数，64个扇区
-    mov $0x8000, %bx    //es:bx:段地址加偏移量，指定loader要存在内存中的起始地址
+    mov $0x8000, %bx    //es:bx:段地址加偏移量，指定loader要存在内存中的起始地址，从BOOT的结束处0x8000开始
     mov $0x0002, %cx    //ch = 柱面号，0号柱面， cl = 扇区号，2号扇区，在BIOS中扇区编号从1开始
     mov $0x0080, %dx    //dh = 磁头号，0号磁头， dl = 驱动器，0x00-0x7f为软盘，0x80-0xff为硬盘
     int $0x13

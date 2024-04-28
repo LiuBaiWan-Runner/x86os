@@ -6,6 +6,6 @@
 #ifndef BOOT_H
 #define BOOT_H
 
-#include "comm/boot_info.h"
+#include "boot_info.h"
 
 #endif

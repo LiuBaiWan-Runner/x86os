@@ -57,6 +57,14 @@
 				{
 					"backtrace" : 3,
 					"path" : "E:/OS/x86os/start/start/source"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/OS/x86os/start/start/source/comm"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/OS/x86os/start/start/source/kernel/include"
 				}
 			],
 			"language" : "ASM",
@@ -77,6 +85,14 @@
 				{
 					"backtrace" : 3,
 					"path" : "E:/OS/x86os/start/start/source"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/OS/x86os/start/start/source/comm"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "E:/OS/x86os/start/start/source/kernel/include"
 				}
 			],
 			"language" : "C",

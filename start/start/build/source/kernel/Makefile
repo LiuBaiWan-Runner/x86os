@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -133,6 +130,30 @@ kernel/fast:
 	cd E:/OS/x86os/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/build
 .PHONY : kernel/fast
 
+cpu/cpu.obj: cpu/cpu.c.obj
+.PHONY : cpu/cpu.obj
+
+# target to build an object file
+cpu/cpu.c.obj:
+	cd E:/OS/x86os/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.obj
+.PHONY : cpu/cpu.c.obj
+
+cpu/cpu.i: cpu/cpu.c.i
+.PHONY : cpu/cpu.i
+
+# target to preprocess a source file
+cpu/cpu.c.i:
+	cd E:/OS/x86os/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.i
+.PHONY : cpu/cpu.c.i
+
+cpu/cpu.s: cpu/cpu.c.s
+.PHONY : cpu/cpu.s
+
+# target to generate assembly for a file
+cpu/cpu.c.s:
+	cd E:/OS/x86os/start/start/build && $(MAKE) $(MAKESILENT) -f source/kernel/CMakeFiles/kernel.dir/build.make source/kernel/CMakeFiles/kernel.dir/cpu/cpu.c.s
+.PHONY : cpu/cpu.c.s
+
 init/init.obj: init/init.c.obj
 .PHONY : init/init.obj
 
@@ -174,6 +195,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... kernel"
+	@echo "... cpu/cpu.obj"
+	@echo "... cpu/cpu.i"
+	@echo "... cpu/cpu.s"
 	@echo "... init/init.obj"
 	@echo "... init/init.i"
 	@echo "... init/init.s"
